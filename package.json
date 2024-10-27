@@ -1,0 +1,13 @@
+{
+    "name": "forex-scraper",
+    "version": "1.0.0",
+    "description": "A simple project to keep track of the USD exchange rate.",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "keywords": [],
+    "author": "Mathias Kriebel",
+    "license": "MIT"
+}
