@@ -1,4 +1,5 @@
 import { get } from 'https';
+import dialog from 'dialog';
 
 var options = {
     host: 'es.tradingview.com',
@@ -16,9 +17,13 @@ var req = get(options, function(response) {
   response.on('end', function() {
     const anchor = "El tipo de cambio actual de USDBRL es ";
     const idx = res_data.indexOf(anchor);
-    const value = res_data.substring(idx + anchor.length, idx + anchor.length + 6);
+    const value = parseFloat(res_data.substring(idx + anchor.length, idx + anchor.length + 6).replace(",","."));
 
-    console.log(value)
+    console.log(value);
+
+    if(value < 6){
+      dialog.info(`Considere comprar dólares agora! Quotação atual: ${value.toLocaleString("pt-br")}`);
+    }
   });
 });
 req.on('error', function(err) {
