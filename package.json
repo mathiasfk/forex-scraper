@@ -5,13 +5,14 @@
     "type": "module",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js"
+        "start": "node src/index.js"
     },
     "keywords": [],
     "author": "Mathias Kriebel",
     "license": "MIT",
     "dependencies": {
         "dialog": "^0.3.1",
-        "dotenv": "^16.4.5"
+        "dotenv": "^16.4.5",
+        "node-fetch": "^3.3.2"
     }
 }
