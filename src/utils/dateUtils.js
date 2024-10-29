@@ -2,7 +2,7 @@ export function formatDate(date) {
     return new Date(date).toISOString().substring(0, 10);
   }
   
-export function getFormattedDateRange(start = -7, end = -1) {
+export function getFormattedDateRange(start = -8, end = -1) {
     if(start > end){
         throw new Error("Start date must be before end date");
     }
