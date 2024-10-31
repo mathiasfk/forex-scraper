@@ -13,7 +13,7 @@ async function main() {
       console.log(`Cotação Atual: ${currentRate}`);
       console.log(`Média da Semana: ${avg}`);
 
-      if (currentRate < avg) {
+      if (currentRate < avg * (1 - config.thresholdPercentage / 100)) {
         showInfoDialog(`
           Considere comprar dólares agora! \n
           Cotação atual: ${currentRate.toLocaleString("pt-br")} \n
